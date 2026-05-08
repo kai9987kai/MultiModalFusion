@@ -1,51 +1,114 @@
 # MultiModalFusion
 
-A minimal, browser-first **multimodal ML control panel** scaffold that groups two training/inference workflows in one place:
+**MultiModalFusion** is a browser-first multimodal machine learning lab for experimenting with text, image, and tabular workflows in one lightweight interface.
 
-- **Language model workflow** (pre-train, fine-tune, generate, save/load)
-- **Tabular ML workflow** (classification/regression, train/predict, save/load)
-- A simple **log panel** for debug/status output
+It upgrades the original debug-style AI interface into a richer **research training observatory** with TensorFlow.js-powered toy modelling, live training metrics, CSV learning tools, uncertainty estimation, explainability, anomaly scanning, and model save/load workflows.
 
-This repo currently ships as a lightweight UI/spec stub in a single file (`index.html`) plus an Apache-2.0 license. :contentReference[oaicite:0]{index=0}
+> This is an experimental in-browser ML playground. It is designed for learning, prototyping, diagnostics, and visual experimentation — not as a production large language model or production ML platform.
 
 ---
 
-## What’s in the repository
+## ✨ Features
 
-- `index.html` — “Enhanced AI Interface (Debug Logging)” UI scaffold listing the intended actions for LMs and tabular models, plus a Logs section. :contentReference[oaicite:1]{index=1}  
-- `LICENSE` — Apache License 2.0. :contentReference[oaicite:2]{index=2}
+### Multimodal Toy Language Model
+
+- Browser-based toy language model workflow
+- Prompt-based pre-training and fine-tuning
+- Token generation with temperature control
+- Optional image input
+- MobileNet-style image embedding concept
+- Mixture-of-Experts inspired toy generation flow
+- Vocabulary and top-prediction inspection
+- Language loss tracking
+- Save, load, download, rebuild, and inspect model controls
+
+### CSV / Tabular Machine Learning
+
+- Upload custom CSV datasets
+- Load built-in sample datasets
+- Classification and regression modes
+- Dynamic label column selection
+- Multiple architecture options:
+  - Residual MLP
+  - Compact fast MLP
+  - Wide dropout MLP
+  - Gated GLU-style MLP
+- Configurable hidden units, dropout, epochs, batch size, learning rate, validation split, and test split
+- Early stopping with best validation restoration
+- Learning-rate schedule options:
+  - Constant
+  - Cosine decay
+  - One-cycle warmup
+  - Reduce on plateau
+- Train, predict, inspect, save, load, and download tabular models
+- Export predictions as CSV
+- Export training history
+- Automatic training report generation
+
+### Live Training Observatory
+
+MultiModalFusion includes a live visual dashboard for understanding model behaviour while training:
+
+- Loss and validation loss
+- Accuracy / MAE style metric tracking
+- Generalization gap
+- Learning-rate schedule
+- Epoch speed
+- Tensor memory usage
+- Holdout probe
+- Weight drift proxy
+- Best validation loss
+- Current learning rate
+- Rows per second
+
+### Model Insight Lab
+
+- Permutation feature importance
+- Model-agnostic feature explainability
+- Encoded feature impact analysis
+- Dataset profiling
+- CSV preview
+- Quality warnings
+- Uncertainty and calibration panel
+- Prediction set / conformal alpha controls
+- Anomaly scanning tools
+
+### Diagnostics + Debugging
+
+- Debug log panel
+- Copy logs
+- Download logs
+- Clear logs
+- TensorFlow.js backend status
+- Tensor memory tracking
+- Model notes
+- Theme toggle
+- Backend switching
+- Memory refresh
+- Lab state reset
 
 ---
 
-## Current UI surface (as specified)
+## 🧠 What This Project Is For
 
-### 1) Language Model
-The interface enumerates the following actions:
+MultiModalFusion is useful for:
 
-- **Pre-train**
-- **Fine-tune**
-- **Generate Response**
-- **Save Language Model**
-- **Load Language Model** :contentReference[oaicite:3]{index=3}
-
-### 2) Tabular Data Training
-The interface enumerates:
-
-- Task type: **Classification** / **Regression**
-- **Train Tabular Model**
-- **Predict**
-- **Save Tabular Model**
-- **Load Tabular Model** :contentReference[oaicite:4]{index=4}
-
-### 3) Logs
-A dedicated section intended for **debug logging / status** output. :contentReference[oaicite:5]{index=5}
+- Learning how in-browser machine learning workflows can be structured
+- Experimenting with small toy text models
+- Testing CSV classification and regression ideas
+- Visualising training behaviour in real time
+- Exploring uncertainty, feature importance, and diagnostics
+- Building a foundation for more advanced multimodal ML interfaces
+- Prototyping private, local-first ML experiments in the browser
 
 ---
 
-## Quick start
+## 🚀 Quick Start
 
-### Option A — open directly
-1. Download the repo (ZIP) or clone it:
-   ```bash
-   git clone https://github.com/kai9987kai/MultiModalFusion.git
-   cd MultiModalFusion
+### Option 1: Open Directly
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kai9987kai/MultiModalFusion.git
+cd MultiModalFusion
